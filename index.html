@@ -7,10 +7,20 @@
 </head>
 <body>
     <h2>Click Play to Listen 💖</h2>
-<audio controls autoplay loop>
-    <source src="https://github.com/TusharDuhan07/romantic-music/raw/refs/heads/main/Kaise%20Hua%20-%20WhatsApp%20Status%20%20Kabir%20Singh.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio>
+
+    <audio id="bg-music" loop>
+        <source src="Kaise Hua - WhatsApp Status Kabir Singh.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const audio = document.getElementById("bg-music");
+            audio.play().catch(error => {
+                console.log("Autoplay was blocked, user interaction required.");
+            });
+        });
+    </script>
 
 </body>
 </html>
